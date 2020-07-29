@@ -37,7 +37,7 @@ func (a *App) Init(user, password, dbname string) {
 
 // Run application on given address
 func (a *App) Run(addr string) {
-	log.Fatal(http.ListenAndServe(":8010", a.Router))
+	log.Fatal(http.ListenAndServe(addr, a.Router))
 }
 
 func (a *App) getProduct(w http.ResponseWriter, r *http.Request) {
