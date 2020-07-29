@@ -20,3 +20,6 @@ env-%:
 
 build: env-APP_DB_USERNAME env-APP_DB_PASSWORD env-APP_DB_NAME
 	go build *.go
+
+test: env-APP_DB_USERNAME env-APP_DB_PASSWORD env-APP_DB_NAME
+	go test -v
